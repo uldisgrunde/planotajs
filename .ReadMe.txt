@@ -3,7 +3,7 @@ Online bāzes zaru var apskatīt https://uldisgrunde.github.io/planotajs/
 bet testēšanai varat izmantot lokālo serveri ar piekļūšanu internetam- 
 dati nāks no interneta
 
-Liekat zem sava zara!
+Liekat KODU zem sava zara!
 
 CSS liekas mapē css.
 JavaScript liekas mapē js
