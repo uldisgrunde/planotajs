@@ -1,1 +1,1 @@
-JavaScript files go here
+JavaScript files are placed here
