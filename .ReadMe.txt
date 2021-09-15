@@ -1,0 +1,12 @@
+Šeit stāv HTML kods!
+Online bāzes zaru var apskatīt https://uldisgrunde.github.io/planotajs/
+bet testēšanai varat izmantot lokālo serveri ar piekļūšanu internetam- 
+dati nāks no interneta
+
+Liekat zem sava zara!
+
+CSS liekas mapē css.
+JavaScript liekas mapē js
+Bildes liekas mapē img
+PHP kodu liekam PHP, bet reāli tas tiks sūtīts uz HOSTINGERAPP.com
+sql mapē liekam ar DB saistītos failus
