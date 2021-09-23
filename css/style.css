@@ -1,0 +1,15 @@
+form {
+    margin: 0 auto;
+    width:250px;
+}
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    background-color: lightseagreen;
+}
+container {
+    justify-content: center;
+}
