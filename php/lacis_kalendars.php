@@ -45,7 +45,17 @@
 
 <body>
 
-<div id='calendar'></div>
+<div class="flex1">
+    <div class="flex2">
+
+        <div id='calendar' class="calendarstyle"></div>
+        <div class="flexbutton">
+            <button class="newEventButton">Izveidot jaunu pasākumu.</button>
+        </div>
+    </div>
+</div>
+
+
 
 </body>
 </html>

@@ -2,3 +2,44 @@
     --header-color: #ffc07f;
     --section-background: #721121;
 }
+
+body {
+    background: rgb(71, 112, 128);
+}
+
+.flex1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+flex2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calendarstyle {
+    width: 600px;
+    margin-top: 10%;
+}
+
+.newEventButton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.flexbutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5%;
+}
