@@ -11,9 +11,9 @@ var now = parseInt(moment().format("Hmm"));
 //function to check each hour block to see if it is past (gray #B0C4DE), present (red #ff6961), or future (blue #87CEFA).
 $.each(timeBlock, function (i, hour) {
   var hourId = parseInt($(this).attr("id"));
-  if (hourId < now-10) {
+  if (hourId < now-5) {
     $(this).next().addClass("past"); //highlights past time
-  } else if (hourId > now) {
+  } else if (hourId > now+5) {
     $(this).next().addClass("future"); //highlights future time
   } else {
     $(this).next().addClass("present"); //highlights current time (by 10 minutes)
