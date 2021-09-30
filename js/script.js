@@ -8,7 +8,7 @@ $("#currentDay").text(currentTime);
 var timeBlock = $(".hour");
 var now = parseInt(moment().format("Hmm"));
 
-//function to check each hour block to see if it is past (gray), present (red), or future (green).
+//function to check each hour block to see if it is past (gray #B0C4DE), present (red #ff6961), or future (blue #87CEFA).
 $.each(timeBlock, function (i, hour) {
   var hourId = parseInt($(this).attr("id"));
   if (hourId < now-10) {
