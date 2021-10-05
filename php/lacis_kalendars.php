@@ -46,6 +46,16 @@
 <body>
 
 <div class="flex1">
+
+    <div id="stundulogs">
+        <div id="stundu-kontaineris">
+            <div class="stundu-item">
+                <p>sveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveiki</p>
+                <p>sveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveikisveiki</p>
+            </div>
+        </div>
+    </div>
+
     <div class="flex2">
 
         <div id='calendar' class="calendarstyle"></div>
@@ -54,7 +64,6 @@
         </div>
     </div>
 </div>
-
 
 
 </body>
