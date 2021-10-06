@@ -1,27 +1,27 @@
 <html>
 <body>
 
-<form action="/">
-  <input type="number" id="days" name="day" placeholder="days" min=0>
-  <input type="number" id="hours" name="hour" placeholder="hours" min=0>
-  <input type="number" id="minutes" name="minutes" placeholder="minutes" min=0>
-</br>
-</br>
+	<form>
+		<input type="number" id="days" name="day" placeholder="days" min=0>
+		<input type="number" id="hours" name="hour" placeholder="hours" min=0>
+		<input type="number" id="minutes" name="minutes" placeholder="minutes" min=0>
+		</br>
+		</br>
+	</form>
 	<button onclick="save()">Save</button>
-</form>
-<p id="demo"></p>
+	<p id="demo"></p>
 
-<script>
-function save() {
-  var days = parseInt(document.getElementById("days").value);
-  var hours = parseInt(document.getElementById("hours").value);
-  var minutes = parseInt(document.getElementById("minutes").value);
- /*day = 1440 minutes, hour = 60 minutes
-days and hours are converted into minutes and counted together into one data*/
-  var sum = days*1440 + hours*60 + minutes;
-  document.getElementById("demo").innerHTML = "Saved as 'Set reminder to  " + sum + " minutes before the event'.";
-}
-</script>
+	<script>
+		function save() {
+		var days = parseInt(document.getElementById("days").value);
+		var hours = parseInt(document.getElementById("hours").value);
+		var minutes = parseInt(document.getElementById("minutes").value);
+		 /*day = 1440 minutes, hour = 60 minutes
+		days and hours are converted into minutes and counted together into one data*/
+		var sum = days*1440 + hours*60 + minutes;
+		document.getElementById("demo").innerHTML = "Saved as 'Set reminder to  " + sum + " minutes before the event'.";
+		}
+	</script>
 
 </body>
 </html>
