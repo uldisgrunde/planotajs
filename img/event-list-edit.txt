@@ -1,0 +1,10 @@
+Funkcionālie
+1. Piespiežot uz "⮜", maina skatu uz pagāšās dienas pūlksteņu laikiem.
+2. Piespiežot uz "⮞", maina skatu uz nākamās dienas pūlksteņu laikiem.
+3. Piespiežot uz "+", atver "Edit event" logu, kur "Event Start" laukā tiek ievietots laiks, kurā piespiedāt "+"
+
+Nefunkcionālie
+1. Rāda izvēlētās dienas datumu(Dienu var izvēlēties izmantojot kalendāru), ja diena netiek izvēlēta, tad rāda šodienas datumu.
+2. Rāda dienas stundas ar 10 minūšu inkrementālu, ja notikums notiek starp 10 minūšu inkrementālu(piem. 12:25), tad tas noteiktais laiks parādas.
+3. Rāda noteiktu notikumu taja noteiktā laikā, noteiktā datumā.
+4. Ja visus dienas laikus nevar rādīt uz ekrāna, tad "Scrollbar" tiek veidots, lai at\lautu piekļuvi pie visien dienas laikiem.
