@@ -16,6 +16,7 @@ if (isset($_POST["title"])) {
     ,'".mysqli_real_escape_string($connection, htmlspecialchars($_POST["start_date"], ENT_QUOTES))."'
     ,'".mysqli_real_escape_string($connection, htmlspecialchars($_POST["end_date"], ENT_QUOTES))."'
     ,'".mysqli_real_escape_string($connection, htmlspecialchars($_POST["uid"], ENT_QUOTES))."')";
+    $connection->query($sql);
 
     header("Location: rihardsl.php?uid=".$uid);
 }
@@ -36,15 +37,15 @@ if ((isset($_POST["want_to_delete"])) && ($_POST["want_to_delete"] == "true")) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Lāča kalendārs</title>
-    <link rel="stylesheet" href="./css/rihardsl_style.css">
+    <link rel="stylesheet" href="../css/rihardsl_style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 
     <!-- Calendar start -->
-    <link href='./libraries/fullcalendar/lib/main.css' rel='stylesheet' />
-    <script src='./libraries/fullcalendar/lib/main.js'></script>
+    <link href='../libraries/fullcalendar/lib/main.css' rel='stylesheet' />
+    <script src='../libraries/fullcalendar/lib/main.js'></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
