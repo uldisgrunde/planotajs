@@ -1,2 +1,0 @@
-Šai mapē būvēsim BackEnd daļu - 
-ar PHP iegūsim no DB  (hostingerapp.com) json datus
