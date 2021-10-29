@@ -1,0 +1,49 @@
+body {
+    background-color: #5723b8;
+    text-align: right;
+}
+
+.activity-panel {
+    background-color: #86081f;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.activity-button {
+    background-color: #be2e49;
+    border: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin-left:auto;
+    margin-bottom: 20px;
+    width: 21%;
+}
+
+.activity-button:hover {
+    background-color: #c46586;
+}
+
+.activity-main {
+    background-color: #ff9428;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.activity-next {
+    background-color: #f26315;
+    text-align: center;
+    width: 400px;
+    height: 40px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
