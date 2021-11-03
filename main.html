@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kopdarbs</title>
+		<link rel="stylesheet" href="./css/bestapp.css">
+		<link rel="stylesheet" href="./css/clock.css">
+		<link rel="stylesheet" href="./css/pulkstenis.css">
+		<script src="./js/pulkstenis.js"></script>
+		<script src="./js/bestapp.js"></script>
+	</head>
+	<body>
+		<div class="activity-panel">
+			<h1>Darāmās aktivitātes</h1>
+		</div>
+		<button class="activity-button">
+			<h2>Pievienot jaunu aktivitāti</h2>
+		</button>
+			<h2 class="activity-next">Nākamā esošā aktivitāte:
+
+    </h2>
+		<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+				<div class="icon-large icon-clock">
+			<div class="clocks">
+			<ol>
+			  <li></li>
+				  <li></li>
+				  <li></li>
+				  <li></li>
+				  <li></li>
+				  <li></li>
+				<li></li>
+				  <li></li>
+				  <li></li>
+				  <li></li>
+				  <li></li>
+				  <li></li>
+			</ol>
+			<div id="hour"></div>
+			<div id="min"></div>
+			<div id="sec"></div>
+		</div>
+	</div>
+		<script src="./js/clock.js"></script>
+		<script>
+			showTime();
+			GetJob()
+		</script>
+	</body>
+</html>
