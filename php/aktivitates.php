@@ -1,12 +1,8 @@
 <html lang="lv">
 <?php
-$servername='auth-db150.hostinger.com';
-$username='u353443769_beis';
-$dbname = 'u353443769_beis';
-$password="testadmin";
-$conn=mysqli_connect($servername,$username,$password,$dbname);
-if(!$conn){
-    die('Could not Connect My Sql:' .mysql_error());
+$alert="";
+if(isset($_GET['alert'])){
+	$alert=$_GET['alert'];
 }
 ?>
 <head>
@@ -14,12 +10,9 @@ if(!$conn){
     <title>Aktivitates</title>
     <link rel="stylesheet" href="./../css/style.css">
 </head>
-<?php
-include 'process.php';
-// mysql apstrade
-?>
 <body>
 <div class="container">
+<p class="alert"><?php echo $alert;?></p>
     <form method="post" action="./process.php">
         <p>
             <label for="nosaukums">Nosaukums:</label>
