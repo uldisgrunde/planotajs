@@ -8,7 +8,7 @@ if(isset($_GET['alert'])){
 <head>
     <meta charset="UTF-8">
     <title>Aktivitates</title>
-    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../css/style_davis.css">
 </head>
 <body>
 <div class="container">
