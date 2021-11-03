@@ -1,0 +1,19 @@
+form {
+    margin: 0 auto;
+    width:200px;
+}
+body {
+    background-color: lightseagreen;
+}
+container {
+    justify-content: center;
+}
+label {
+    display: block;
+    text-align: center;
+}
+.input-date {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
