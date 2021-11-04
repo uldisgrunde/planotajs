@@ -49,7 +49,7 @@ background-color: #F8F8FF;
 </head>
 <body>
 <div class="virsraksts">Kopîgot plnotâju</div><br>
-<div class="info">Tavs ID:<br><?php echo "uID"?><br>Kopîgot ar:<br>
+<div class="info">Tavs ID:<br><?php echo ". $row["id"]. "?><br>Kopîgot ar:<br>
 <input type="text" pattern="[0-9]{6}"></div><br>
 <button class="poga" type="button">Meklet</button>
 </html> 
