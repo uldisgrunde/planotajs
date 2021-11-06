@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  <meta name="Author" content="Emīls">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"    />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/de03f8749b.js"
+      crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./../css/reminder.css" />
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <p id="currentDay" class="lead"></p>
+    </header>
+
+    <div class="container">
+      <!-- Timeblocks go here -->
+	  
+		<button onclick="ScrollCurrentTime()">Current Time</button>
+		
+		<p id="demo"></p>
+	
+
+		<!--
+	<div class="row">
+        <div class="col-2 time-block hour" id="time_time">time</div>
+        <div class="col-8 time-slot">
+			<textarea 
+				id="time_text"
+				placeholder="Add events here"
+				class="calendar-item"
+				rows="2"
+				cols="50"
+			></textarea>
+        </div>
+        <div class="col-2 saveBtn">
+			<button id="time" class="btn btn-secondary">Save</button>
+        </div>
+    </div>
+		-->
+		
+    </div>
+	
+	<!--back to top button -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	
+	<script>
+		//set time
+		let text = "";
+		//hours
+		for (let i = 0; i < 24; i++) {
+			text += '<div class="row" id="'+i+'00"><div class="col-2 time-block hour" id="'+i+'00_time">'+i+":00"+'</div><div class="col-8 time-slot"><textarea id="'+i+"00_text"+'"placeholder="Add events here"class="calendar-item"rows="2"cols="50"></textarea></div><div class="col-2 saveBtn"><button id="'+i+"00_save"+'" class="btn btn-secondary">Edit</button></div></div>';
+			//minutes(10 minutes)
+			for (let l = 1; l <6; l++){
+				text += '<div class="row" id="'+i+l+'0"><div class="col-2 time-block hour" id="'+i+l+'0_time">'+i+":"+l+"0"+'</div><div class="col-8 time-slot"><textarea id="'+i+l+"0_edit"+'"placeholder="Add events here"class="calendar-item"rows="2"cols="50"></textarea></div><div class="col-2 saveBtn"><button id="'+i+l+"0_save"+'" class="btn btn-secondary">Edit</button></div></div>';
+				
+				for (let j = 1; j <10; j++){
+					text += '<div class="row" id="'+i+l+j+'"><div class="col-2 time-block hour" id="'+i+l+j+'_time">'+i+":"+l+j+'</div><div class="col-8 time-slot"><textarea id="'+i+l+j+"_edit"+'"placeholder="Add events here"class="calendar-item"rows="2"cols="50"></textarea></div><div class="col-2 saveBtn"><button id="'+i+l+j+"_save"+'" class="btn btn-secondary">Edit</button></div></div>';
+				}			
+			}
+		}
+		document.getElementById("demo").innerHTML = text;
+		
+		
+	</script>
+    <script src="./../js/reminder.js"></script>
+  </body>
+</html>
