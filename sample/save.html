@@ -1,0 +1,108 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+    <title>test</title>
+</head>
+
+<body onload="GetData();">
+    <div id="msg"></div>
+    <form id="form">
+        <input type="text" id="title" required value="">
+        <input class="input-date" type="date" required id="start_date" value="YYYY-MM-DD" min="2021-10-26" max="2022-12-31">
+        <input class="input-date" type="date" required id="end_date" value="YYYY-MM-DD" min="2021-10-26" max="2022-12-31">
+		<select id="uid"  onchange="GetData();if(this.value==''){document.getElementById('save').disabled = true;}else{document.getElementById('save').disabled = false;}">
+			<option value=""></option>
+		</select>
+		<input id="save"type="button" onclick='SaveData()' value="saglabāt" disabled>
+    </form>
+    <div id="lists" style='width:200px'>&nbsp;</div>
+</body>
+<script>
+
+function serializeJSON (form) {
+ var obj = {};
+  Array.prototype.slice.call(form.elements).forEach(
+	function (field) {
+		if (!field.id || field.disabled || ['file', 'reset', 'submit', 'button'].indexOf(field.type) > -1) {
+			return;
+		}
+		if (field.type === 'select-multiple') {
+		  var options = [];
+		  Array.prototype.slice.call(field.options).forEach(
+			function (option) {
+				if (!option.selected){
+					return;
+				} 
+					options.push(option.value);
+			});
+			if (options.length) {
+				obj[field.name] = options;
+			}
+			return;
+		}
+		if (['checkbox', 'radio'].indexOf(field.type) > -1 && !field.checked) {
+			return;
+		}
+		obj[field.id] = field.value;
+	  });
+  return JSON.stringify(obj, null, 2);
+}
+function GetData(){
+	let saraksts= document.getElementById("uid");
+	fetch(`https://dsp.tools/planotajs/index.php?q=rihardsl&p=1`)
+	.then(response => response.json())
+	.then(function(data) {
+		table=data.records;
+		for(let key in table) {
+			let option = document.createElement('option');
+			option.text = table[key].uid;
+			option.value = table[key].uid;
+			saraksts.appendChild(option);
+		}
+	});
+	if (saraksts.value==""){}
+	else{
+		 fetch(`https://dsp.tools/planotajs/index.php?q=rihardsl&uid=${saraksts.value}`)
+		.then(response => response.json())
+		.then(function(data) {
+		document.getElementById("lists").innerHTML ="";
+		table=data.records;
+		for(let key in table) {
+			document.getElementById("lists").innerHTML +=
+			`<hr>
+			Nosaukums: ${data.records[key].title}<br/> 
+			Datums no: ${data.records[key].start_date}<br/>
+			Datums līdz: ${data.records[key].end_date}<br/>
+			` 
+	}
+			document.getElementById("lists").innerHTML +="<HR>" ;
+
+		});
+	}
+}
+function SaveData(){
+	let data=serializeJSON(document.getElementById("form"));
+	fetch(
+			'https://dsp.tools/planotajs/index.php?i=rihardsl_save',
+			{
+				method: 'POST', 
+				headers: {
+					'Content-Type':'application/x-www-form-urlencoded'
+					//"Content-type":"application/json"
+				}, 
+				body:data,
+			}
+		)
+		.then(response => response.text())
+		.then(function(text) {
+			GetData();
+			document.getElementById("title").value="";
+			document.getElementById("start_date").value="";
+			document.getElementById("end_date").value="";
+			document.getElementById("msg").innerHTML = text;
+			setTimeout(() => {document.getElementById("msg").innerHTML = "&nbsp;";}, 3000);
+		});
+	}
+
+</script>
+</html>
