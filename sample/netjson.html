@@ -28,7 +28,7 @@
   <script>
   dati();
 	function dati(){
-		fetch("test.json")
+		fetch("./../json/netjson.json")
 		.then(response => response.json())//ja ielasits
 		.then(function(data) {//tad atspogulots
 			let tabula= document.getElementById("tabula");

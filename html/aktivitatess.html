@@ -1,0 +1,58 @@
+<html lang="lv">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Author" content="Davis Ozols">
+		<title>Aktivitates</title>
+		<link rel="stylesheet" href="./../css/aktivitates.css">
+		<script src="./../js/aktivitates.js"></script>
+	</head>
+	<body onload="para()">
+	<p class="alert" id="alert"></p>
+		<form id="form" 
+			class="container" 
+			onsubmit='return validateForm(); alert(serializeJSON(document.getElementById("form")))' 
+			method="post"
+			action="./../php/process.php">
+        <p>
+            <label for="nosaukums">Nosaukums:</label>
+            <input type="text" 
+				name="nosaukums"
+				required 
+				id="nosaukums">
+        </p>
+        <p>
+            <label for="darbiba">Darbība:</label>
+            <input type="text" 
+				name="darbiba"
+				required 
+				id="darbiba">
+        </p>
+
+		<label for="sakums">Datums no:</label>
+		<input class="input-date" 
+			type="date" 
+			name="sakums"
+			required 
+			id="sakums" 
+			value="YYYY-MM-DD"
+			min="2021-10-26" 
+			max="2022-12-31">
+
+		<label for="beigas">Datums līdz:</label>
+		<input class="input-date" 
+			type="date" 
+			name="beigas"
+			id="beigas"
+			value="YYYY-MM-DD"
+			min="2021-10-26" 
+			max="2022-12-31">
+	<!-- </div> -->
+	<div style="text-align:center;">
+		<input class="input-date" 
+			type="submit" 
+			name="save" 
+			value="Iesniegt">
+	</div>
+	</form>
+</body>
+</html>

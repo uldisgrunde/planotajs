@@ -1,4 +1,4 @@
-function GetJob(){}
+function GetJob(){
 	for(let i=1 ;i<2;i++){
 		let html=`\t\t\t<h2 class="activity-main">
 		${activity[i]["title"]}<br>

@@ -1,1 +1,0 @@
-# 410. programmēšanas kursa online plānotājs.

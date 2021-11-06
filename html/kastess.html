@@ -1,0 +1,22 @@
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="Author" content="Markuss">
+	  <link rel="stylesheet" href="./../css/kastess.css">
+		<script src="./../js/kastes.js"></script>
+   </head>
+   <body>
+      <div class="virsraksts">Kopîgot plnotâju</div>
+      <br>
+      <div class="info">Tavs ID:<br><span id="uid"></span><br>Kopîgot ar:<br>
+         <input id="seek" type="text" pattern="[0-9]{6}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+      </div>
+      <button class="poga" type="button" onclick="Data()">Meklēt</button>
+      <div class="info">Drauga ID:<br><span id="did"></span><br>
+         Drauga vārds:<br><span id="dname"></span>
+      </div>
+</html>
+<script>
+   document.getElementById("uid").innerHTML ="41430";
+</script>
